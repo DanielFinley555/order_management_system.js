@@ -101,4 +101,19 @@ function completeOrder(i) {
 
 orders.forEach(completeOrder =>
     console.log(completeOrder))
-    
+
+
+
+//Task 6: Create a Function to Check Pending Orders
+
+checkPendingOrders();
+
+function checkPendingOrders(orders) {
+    orders.find((status) =>
+      status = Pending);
+};
+//displaying the details for the order that is still pending
+  console.log(custumer)
+  products.forEach(
+    console.log(name),
+    console.log(quantity));
