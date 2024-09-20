@@ -26,7 +26,7 @@ function placeOrder() {
         customer: 'Steve',
         products: [
             {name: 'Diet Coke', quantity: 1},
-            {name: 'Protein Bar', quantity: 2 },
+            {name: 'Protein Bar', quantity: 2},
             {name: 'Protein Shake', quantity: 1}
         ],
         status: 'Completed'
@@ -87,3 +87,18 @@ function calculateOrderTotal(orders) {
 //Calculating the order total
 const orderTotal = calculateOrderTotal(i);
 console.log(`Order Total for the order is: $${orderTotal}`);
+
+
+
+//Task 5: Create a Function to Mark an Order as Completed
+
+completeOrder();
+
+function completeOrder(i) {
+    orders.find (customer)
+    return "Status: Completed"
+}
+
+orders.forEach(completeOrder =>
+    console.log(completeOrder))
+    
