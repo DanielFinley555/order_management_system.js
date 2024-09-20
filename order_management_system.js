@@ -66,3 +66,24 @@ orders.forEach(i => {
         console.log(`quantity: ${i.quantity}`)
     });
 });
+
+
+
+//Task 4: Create a Function to Calculate Total for an Order
+
+//Calling the calculateOrderTotal function
+calculateOrderTotal();
+
+function calculateOrderTotal(orders) {
+    let orderTotal = orders.products;
+
+    for (let price of orders.products) {
+        orderTotal += calculateOrderTotal (price);
+    }
+
+    return orderTotal;
+}
+
+//Calculating the order total
+const orderTotal = calculateOrderTotal(i);
+console.log(`Order Total for the order is: $${orderTotal}`);
