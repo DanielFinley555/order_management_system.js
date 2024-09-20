@@ -11,4 +11,58 @@ const inventory = [
 
 //Task 2: Create an Orders Array of Order Objects
 
-const orders = [];
+let orders = [];
+
+
+
+//Task 3: Create a Function to Place an Order
+
+//Calling the placeOrder function (Hoisting)
+placeOrder();
+
+function placeOrder() {
+    //using push to add information into the orders array
+    orders.push({
+        customer: 'Steve',
+        products: [
+            {name: 'Diet Coke', quantity: 1},
+            {name: 'Protein Bar', quantity: 2 },
+            {name: 'Protein Shake', quantity: 1}
+        ],
+        status: 'Completed'
+    });
+
+    orders.push({
+        customer: 'Alex',
+        products: [
+            {name: 'Protein Bar', quantity: 3},
+            {name: 'Protein Shake', quantity: 2},
+            {name: 'Salad', quantity: 2}
+        ],
+        status: 'Completed'
+    });
+
+    orders.push({
+        customer: 'Michael',
+        products: [
+            {name: 'Diet Coke', quantity: 6},
+            {name: 'Protein Bar', quantity: 12},
+            {name: 'Protein Shake', quantity: 4},
+            {name: 'Salad', quantity: 5}
+        ],
+        status: 'Pending'
+    });
+};
+
+console.log ("Order list:")
+
+//using forEach to see the customers and their order status for the order.
+orders.forEach(i => {
+    console.log(`Customer: ${i.customer}`)
+    console.log(`Status: ${i.status}`)
+//using forEach for the products arrays to see the individual products ordered from each customer
+    i.products.forEach(i => {
+        console.log(`${i.name}`)
+        console.log(`quantity: ${i.quantity}`)
+    });
+});
